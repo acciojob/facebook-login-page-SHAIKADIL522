@@ -1,1 +1,160 @@
 /*  your css code here. If applicable */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1c1e21;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  max-width: 980px;
+  width: 100%;
+}
+
+/* ---------- Branding ---------- */
+.brand {
+  flex: 1 1 400px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.brand__logo {
+  color: #1877f2;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.brand__tagline {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+/* ---------- Login card ---------- */
+.login-card {
+  flex: 0 1 396px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-form input {
+  height: 52px;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  padding: 0 16px;
+  font-size: 17px;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #1877f2;
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+.btn {
+  height: 48px;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: #166fe5;
+}
+
+.forgot-link {
+  text-align: center;
+  color: #1877f2;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #dadde1;
+  margin: 8px 0;
+}
+
+.btn--secondary {
+  background-color: #42b72a;
+  color: #fff;
+  align-self: center;
+  padding: 0 16px;
+}
+
+.btn--secondary:hover {
+  background-color: #36a420;
+}
+
+/* ---------- Accessibility helper ---------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .brand__logo {
+    font-size: 40px;
+  }
+
+  .brand__tagline {
+    font-size: 18px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 396px;
+  }
+}
